@@ -11,15 +11,16 @@
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://pyramid-systems-inc.github.io/" />
     <link rel="icon" href="assets/favicon.ico" sizes="32x32" />
-
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <meta property="og:title" content="Pyramid Systems Inc — Engineering that ships" />
     <meta
       property="og:description"
       content="Founder-led engineering studio. Production-ready backends, Unity performance & game engine expertise, and fast MVP sprints. Book a free 30-min technical audit."
     />
-    <meta property="og:image" content="assets/logo.jpg" />
+    <meta property="og:image" content="https://pyramid-systems-inc.github.io/assets/logo.jpg" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://pyramid-systems-inc.github.io/" />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <meta name="theme-color" content="#071025" />
     <meta name="color-scheme" content="dark" />
@@ -36,7 +37,8 @@
           "https://github.com/Pyramid-Systems-Inc",
           "https://github.com/OmarAglan",
           "https://www.linkedin.com/in/omar-aglan919/",
-          "https://www.facebook.com/OmarAglan966/"
+          "https://www.facebook.com/OmarAglan966/",
+          "https://www.facebook.com/profile.php?id=61574917845652"
         ],
         "contactPoint": [
           {
@@ -47,6 +49,13 @@
           }
         ]
       }
+    </script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-1f1hGK6TjF1sATiY7Ml4o.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
     </script>
   </head>
   <body>
@@ -123,7 +132,7 @@
           </ul>
 
           <div class="hero-ctas" role="group" aria-label="Primary actions">
-            <a class="btn btn-primary" href="https://calendly.com/omar-aglan/30min"
+            <a class="btn btn-primary" href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/omar-aglan91/30min'});return false;"
               >Book a 30-minute discovery</a
             >
             <a class="btn btn-secondary" href="assets/Omar_Aglan_CV.pdf">Download CV</a>
@@ -271,10 +280,7 @@
                   >Facebook</a
                 >
               </div>
-              <div class="founder-cta">
-                <a class="btn btn-primary" href="https://calendly.com/omar-aglan/30min"
-                  >Book a 30-minute discovery</a
-                >
+              <a class="cta" href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/omar-aglan91/30min'});return false;" id="book-cta" rel="noopener" target="_blank" data-cta="book-discovery">Book a 30-minute discovery</a>
                 <a class="btn btn-secondary" href="assets/Omar_Aglan_CV.pdf">Download CV</a>
               </div>
             </div>
@@ -318,7 +324,7 @@
                   href="mailto:omar.aglan91@gmail.com?subject=Project%20Inquiry"
                   >Email: Project Inquiry</a
                 >
-                <a class="btn btn-secondary" href="https://calendly.com/omar-aglan/30min"
+                <a class="btn btn-secondary" href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/omar-aglan91/30min'});return false;"
                   >Book a 30-minute discovery</a
                 >
               </div>
@@ -337,6 +343,17 @@
             </div>
           </div>
 
+          <form class="contact-form" action="https://formspree.io/f/meelerqq" method="POST">
+            <h3>Send a project inquiry</h3>
+            <input type="hidden" name="_subject" value="Pyramid Systems — Website Inquiry">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="_replyto" placeholder="Email" required>
+            <input type="text" name="company" placeholder="Company / Project">
+            <textarea name="message" placeholder="Brief project summary (stack, timeline, current blockers)"></textarea>
+            <input type="hidden" name="source" value="website">
+            <button type="submit" class="btn btn-primary">Request free 30-min audit</button>
+          </form>
+
           <div class="legal-links">
             <a href="#privacy">Privacy</a>
             <span aria-hidden="true">·</span>
@@ -349,8 +366,10 @@
         <div class="container">
           <h2>Privacy</h2>
           <p>
-            This site is static and does not collect analytics by default. If you contact via email or Calendly,
-            your message and scheduling details are handled by your email provider and Calendly.
+            This site uses <a href="https://plausible.io" target="_blank" rel="noopener noreferrer">Plausible Analytics</a>,
+            a privacy-friendly, cookie-free analytics tool. No personal data is collected or stored.
+            If you contact via email, Calendly, or the contact form, your message and details are handled
+            by your email provider, Calendly, and <a href="https://formspree.io" target="_blank" rel="noopener noreferrer">Formspree</a> respectively.
           </p>
         </div>
       </section>
